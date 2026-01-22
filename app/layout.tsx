@@ -1,16 +1,13 @@
-import "./globals.css";
+import { ReactNode } from "react";
 
-export const metadata = {
-  title: "Restaurant App",
-  description: "Frontend Developer Technical Test",
+type RootLayoutProps = {
+  children: ReactNode;
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-900">
-        {children}
-      </body>
+      <body className="bg-gray-50 text-gray-900">{children}</body>
     </html>
   );
 }
